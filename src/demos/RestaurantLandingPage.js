@@ -9,11 +9,15 @@ import MainFeature2 from "components/features/TwoColSingleFeatureWithStats2.js";
 import TabGrid from "components/cards/TabCardGrid.js";
 import Testimonial from "components/testimonials/ThreeColumnWithProfileImage.js";
 import DownloadApp from "components/cta/DownloadApp.js";
-import Footer from "components/footers/FiveColumnWithInputForm.js";
+import Footer from "components/footers/FiveColumnWithBackground.js";
 
 import chefIconImageSrc from "images/chef-icon.svg";
 import celebrationIconImageSrc from "images/celebration-icon.svg";
 import shopIconImageSrc from "images/shop-icon.svg";
+import renoImageSrc from 'images/renovation-1.jpg';
+import renoImage2Src from 'images/renovation-2.jpg';
+import whyUsImageSrc from 'images/why-us.jpg';
+
 
 export default () => {
   const Subheading = tw.span`tracking-wider text-sm font-medium`;
@@ -24,20 +28,20 @@ export default () => {
   return (
     <AnimationRevealPage>
       <Hero
-        heading={<>Delicious & Affordable <HighlightedText>Meals Near You.</HighlightedText></>}
+        heading={<>Artistic & Fuss Free <HighlightedText>Home Makeover.</HighlightedText></>}
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        imageSrc="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
+        imageSrc={renoImageSrc}
         imageCss={imageCss}
         imageDecoratorBlob={true}
-        primaryButtonText="Order Now"
-        watchVideoButtonText="Meet The Chefs"
+        primaryButtonText="Get a Quote"
+        watchVideoButtonText="Meet Our Interior Designers"
       />
       <MainFeature
         subheading={<Subheading>Established Since 2014</Subheading>}
         heading={
           <>
-            We've been serving for
-            <wbr /> <HighlightedText>over 5 years.</HighlightedText>
+            Reliable & Fast
+            <wbr /> <HighlightedText>Rental Changeover</HighlightedText>
           </>
         }
         description={
@@ -51,10 +55,8 @@ export default () => {
         }
         buttonRounded={false}
         textOnLeft={false}
-        primaryButtonText="Latest Offers"
-        imageSrc={
-          "https://images.unsplash.com/photo-1460306855393-0410f61241c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
-        }
+        primaryButtonText="Get a Quote"
+        imageSrc={renoImage2Src}
         imageCss={imageCss}
         imageDecoratorBlob={true}
         imageDecoratorBlobCss={tw`left-1/2 -translate-x-1/2 md:w-32 md:h-32 opacity-25`}
@@ -63,61 +65,27 @@ export default () => {
       <TabGrid
         heading={
           <>
-            Checkout our <HighlightedText>menu.</HighlightedText>
+            Checkout our <HighlightedText>services.</HighlightedText>
           </>
         }
-      />
-      <Features
-        heading={
-          <>
-            Amazing <HighlightedText>Services.</HighlightedText>
-          </>
-        }
-        cards={[
-          {
-            imageSrc: shopIconImageSrc,
-            title: "230+ Locations",
-            description: "Lorem ipsum donor amet siti ceali placeholder text",
-            url: "https://google.com"
-          },
-          {
-            imageSrc: chefIconImageSrc,
-            title: "Professional Chefs",
-            description: "Lorem ipsum donor amet siti ceali placeholder text",
-            url: "https://timerse.com"
-          },
-          {
-            imageSrc: celebrationIconImageSrc,
-            title: "Birthday Catering",
-            description: "Lorem ipsum donor amet siti ceali placeholder text",
-            url: "https://reddit.com"
-          }
-        ]}
-
-        imageContainerCss={tw`p-2!`}
-        imageCss={tw`w-20! h-20!`}
       />
       <MainFeature2
         subheading={<Subheading>A Reputed Brand</Subheading>}
         heading={<>Why <HighlightedText>Choose Us ?</HighlightedText></>}
         statistics={[
           {
-            key: "Orders",
-            value: "94000+",
+            key: "Positive Ratings",
+            value: "99%",
           },
           {
-            key: "Customers",
-            value: "11000+"
+            key: "Shipped On Time",
+            value: "100%"
           },
-          {
-            key: "Chefs",
-            value: "1500+"
-          }
         ]}
-        primaryButtonText="Order Now"
+        primaryButtonText="Get a Quote"
         primaryButtonUrl="https://order.now.com"
         imageInsideDiv={false}
-        imageSrc="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEzNzI2fQ&auto=format&fit=crop&w=768&q=80"
+        imageSrc={whyUsImageSrc}
         imageCss={Object.assign(tw`bg-cover`, imageCss)}
         imageContainerCss={tw`md:w-1/2 h-auto`}
         imageDecoratorBlob={true}
@@ -127,9 +95,6 @@ export default () => {
       <Testimonial
         subheading=""
         heading={<>Customers <HighlightedText>Love Us.</HighlightedText></>}
-      />
-      <DownloadApp
-        text={<>People around you are ordering delicious meals using the <HighlightedTextInverse>Treact App.</HighlightedTextInverse></>}
       />
       <Footer />
     </AnimationRevealPage>
