@@ -8,11 +8,12 @@ Modal.setAppElement("#root");
 
 ReactDOM.render(
   <Auth0Provider
-  domain="tws.au.auth0.com"
-  clientId="8tYWJMRaViJVufZRDO7bRyAISKRRQ2BW"
-  redirectUri="https://stanleyawang.github.io/tws"
->
-  <App /> 
+    domain="tws.au.auth0.com"
+    clientId="8tYWJMRaViJVufZRDO7bRyAISKRRQ2BW"
+    // redirectUri="https://stanleyawang.github.io/tws"
+    redirectUri="http://localhost:3000"
+  >
+    <App />
   </Auth0Provider>,
   document.getElementById("root")
 );

@@ -25,7 +25,7 @@ const AccordionFooter = tw.div`fixed md:relative border-t-1 border-primary-500 b
 const PrimaryButton = tw.button`font-bold px-6 lg:px-8 py-3 rounded bg-primary-500 text-gray-100 hocus:bg-primary-700 focus:shadow-outline focus:outline-none transition duration-300`;
 
 const QuestionPage = () => {
-  
+    
   const [postcode, setPostcode] = useState('')
 
   const handleConfirm = () => {
