@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import tw from "twin.macro";
 import styled from "styled-components";
+import { useAuth0 } from "@auth0/auth0-react";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
@@ -57,6 +58,7 @@ export const DesktopNavLinks = tw.nav`
 `;
 
 export default ({ roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" }) => {
+  const { user, isAuthenticated, isLoading, loginWithRedirect, logout } = useAuth0();
   /*
    * This header component accepts an optionals "links" prop that specifies the links to render in the navbar.
    * This links props should be an array of "NavLinks" components which is exported from this file.
@@ -76,10 +78,12 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
       <NavLink href="/#">Blog</NavLink>
       <NavLink href="/#">Pricing</NavLink>
       <NavLink href="/#">Contact Us</NavLink>
-      <NavLink href="/#" tw="lg:ml-12!">
+      {!isAuthenticated && (<><NavLink onClick={() => loginWithRedirect()} tw="lg:ml-12!" style={{ cursor: 'pointer'}}>
         Login
       </NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Sign Up</PrimaryLink>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Sign Up</PrimaryLink></>)}
+      {isAuthenticated && (
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} onClick={() => logout()} style={{ cursor: 'pointer'}}>Logout</PrimaryLink>)}
     </NavLinks>
   ];
 

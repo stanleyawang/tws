@@ -3,17 +3,12 @@ import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "components/hero/TwoColumnWithVideo.js";
-import Features from "components/features/ThreeColSimple.js";
 import MainFeature from "components/features/TwoColWithButton.js";
 import MainFeature2 from "components/features/TwoColSingleFeatureWithStats2.js";
 import TabGrid from "components/cards/TabCardGrid.js";
 import Testimonial from "components/testimonials/ThreeColumnWithProfileImage.js";
-import DownloadApp from "components/cta/DownloadApp.js";
 import Footer from "components/footers/FiveColumnWithBackground.js";
 
-import chefIconImageSrc from "images/chef-icon.svg";
-import celebrationIconImageSrc from "images/celebration-icon.svg";
-import shopIconImageSrc from "images/shop-icon.svg";
 import renoImageSrc from 'images/renovation-1.jpg';
 import renoImage2Src from 'images/renovation-2.jpg';
 import whyUsImageSrc from 'images/why-us.jpg';
@@ -26,7 +21,7 @@ export default () => {
   const Description = tw.span`inline-block mt-8`;
   const imageCss = tw`rounded-4xl`;
   return (
-    <AnimationRevealPage>
+    <AnimationRevealPage disabled={true}>
       <Hero
         heading={<>Artistic & Fuss Free <HighlightedText>Home Makeover.</HighlightedText></>}
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
