@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
+import { useHistory } from 'react-router-dom'
+import { useAuth0 } from "@auth0/auth0-react";
 //eslint-disable-next-line
 import { css } from "styled-components/macro";
 
@@ -62,13 +64,15 @@ export default ({
   heading = "Modern React Templates, Just For You",
  description="Our templates are easy to setup, understand and customize. Fully modular components with a variety of pages and components.",
   primaryButtonText="Get Started",
-  primaryButtonUrl="#",
+  primaryButtonUrl="/questions",
   watchVideoButtonText="Watch Video",
   watchVideoYoutubeUrl="https://www.youtube.com/embed/_GuOjXYl5ew",
   imageSrc=DesignIllustration,
   imageCss=null,
   imageDecoratorBlob = false,
 }) => {
+  const { isAuthenticated, loginWithRedirect } = useAuth0();
+  const history = useHistory()
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const toggleModal = () => setModalIsOpen(!modalIsOpen);
@@ -82,7 +86,20 @@ export default ({
             <Heading>{heading}</Heading>
             <Paragraph>{description}</Paragraph>
             <Actions>
-              <PrimaryButton as="a" href={primaryButtonUrl}>{primaryButtonText}</PrimaryButton>
+              <PrimaryButton 
+                as="a" href={primaryButtonUrl}
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (isAuthenticated) {
+                    history.push('/questions')
+                  } else {
+                    loginWithRedirect()
+                  }
+                }}
+              >
+                {primaryButtonText}
+                </PrimaryButton>
+
               <WatchVideoButton onClick={toggleModal}>
                 <span className="playIconContainer">
                   <PlayIcon className="playIcon" />
