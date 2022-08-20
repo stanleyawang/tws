@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/tws/static/css/main.def877c0.chunk.css",
-    "main.js": "/tws/static/js/main.c493f306.chunk.js",
-    "main.js.map": "/tws/static/js/main.c493f306.chunk.js.map",
+    "main.css": "/tws/static/css/main.1240687a.chunk.css",
+    "main.js": "/tws/static/js/main.a7ebdcda.chunk.js",
+    "main.js.map": "/tws/static/js/main.a7ebdcda.chunk.js.map",
     "runtime-main.js": "/tws/static/js/runtime-main.2925a4dc.js",
     "runtime-main.js.map": "/tws/static/js/runtime-main.2925a4dc.js.map",
     "static/css/2.792fcacf.chunk.css": "/tws/static/css/2.792fcacf.chunk.css",
-    "static/js/2.28f024a9.chunk.js": "/tws/static/js/2.28f024a9.chunk.js",
-    "static/js/2.28f024a9.chunk.js.map": "/tws/static/js/2.28f024a9.chunk.js.map",
+    "static/js/2.d7b8eaf4.chunk.js": "/tws/static/js/2.d7b8eaf4.chunk.js",
+    "static/js/2.d7b8eaf4.chunk.js.map": "/tws/static/js/2.d7b8eaf4.chunk.js.map",
     "index.html": "/tws/index.html",
     "static/css/2.792fcacf.chunk.css.map": "/tws/static/css/2.792fcacf.chunk.css.map",
-    "static/css/main.def877c0.chunk.css.map": "/tws/static/css/main.def877c0.chunk.css.map",
-    "static/js/2.28f024a9.chunk.js.LICENSE.txt": "/tws/static/js/2.28f024a9.chunk.js.LICENSE.txt",
+    "static/css/main.1240687a.chunk.css.map": "/tws/static/css/main.1240687a.chunk.css.map",
+    "static/js/2.d7b8eaf4.chunk.js.LICENSE.txt": "/tws/static/js/2.d7b8eaf4.chunk.js.LICENSE.txt",
     "static/media/AboutUsPage.c9232ae2.jpeg": "/tws/static/media/AboutUsPage.c9232ae2.jpeg",
     "static/media/AgencyLandingPage.717f8ed6.jpeg": "/tws/static/media/AgencyLandingPage.717f8ed6.jpeg",
     "static/media/BlogIndexPage.0f03fbdc.jpeg": "/tws/static/media/BlogIndexPage.0f03fbdc.jpeg",
@@ -42,6 +42,7 @@
     "static/media/chevron-left.svg": "/tws/static/media/chevron-left.982a40d4.svg",
     "static/media/chevron-right.svg": "/tws/static/media/chevron-right.d45fd2f4.svg",
     "static/media/clock.svg": "/tws/static/media/clock.38585fec.svg",
+    "static/media/coffee.svg": "/tws/static/media/coffee.63ddee6e.svg",
     "static/media/customer-support-illustration.7164659e.svg": "/tws/static/media/customer-support-illustration.7164659e.svg",
     "static/media/customers-logo-strip.680ac7c2.png": "/tws/static/media/customers-logo-strip.680ac7c2.png",
     "static/media/customize-icon.367468c9.svg": "/tws/static/media/customize-icon.367468c9.svg",
@@ -49,6 +50,7 @@
     "static/media/design-illustration.415c277c.svg": "/tws/static/media/design-illustration.415c277c.svg",
     "static/media/dollar-sign.svg": "/tws/static/media/dollar-sign.8d9a6f93.svg",
     "static/media/dot-pattern.ee6f4f0e.svg": "/tws/static/media/dot-pattern.ee6f4f0e.svg",
+    "static/media/droplet.svg": "/tws/static/media/droplet.49d3b134.svg",
     "static/media/electrical.7fc7142a.jpg": "/tws/static/media/electrical.7fc7142a.jpg",
     "static/media/email-illustration.84fb82b8.svg": "/tws/static/media/email-illustration.84fb82b8.svg",
     "static/media/email-newsletter-icon.9dc37655.svg": "/tws/static/media/email-newsletter-icon.9dc37655.svg",
@@ -105,13 +107,14 @@
     "static/media/user.svg": "/tws/static/media/user.780a52a3.svg",
     "static/media/why-us.98166777.jpg": "/tws/static/media/why-us.98166777.jpg",
     "static/media/x.svg": "/tws/static/media/x.6c9a4ba7.svg",
-    "static/media/youtube-icon.10cce4d9.svg": "/tws/static/media/youtube-icon.10cce4d9.svg"
+    "static/media/youtube-icon.10cce4d9.svg": "/tws/static/media/youtube-icon.10cce4d9.svg",
+    "static/media/zap.svg": "/tws/static/media/zap.266beaf1.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.2925a4dc.js",
     "static/css/2.792fcacf.chunk.css",
-    "static/js/2.28f024a9.chunk.js",
-    "static/css/main.def877c0.chunk.css",
-    "static/js/main.c493f306.chunk.js"
+    "static/js/2.d7b8eaf4.chunk.js",
+    "static/css/main.1240687a.chunk.css",
+    "static/js/main.a7ebdcda.chunk.js"
   ]
 }
