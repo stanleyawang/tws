@@ -15,7 +15,6 @@
     transform: scale(0);
     /* transform: translateY(-150%); */
 }
-@media screen and (max-width: 767px) {
     .question-footer {
         background-color: white;
         bottom: 0;
@@ -23,4 +22,3 @@
         z-index: 99;
         width: 100%;
     }
-}
