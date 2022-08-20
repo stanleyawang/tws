@@ -93,7 +93,7 @@ export default ({
                   if (isAuthenticated) {
                     history.push('/questions')
                   } else {
-                    loginWithRedirect()
+                    loginWithRedirect({ appState: { targetUrl: '/questions' } })
                   }
                 }}
               >

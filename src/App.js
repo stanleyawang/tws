@@ -100,7 +100,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 // import BlogIndexPage from "pages/BlogIndex.js";
 // import TermsOfServicePage from "pages/TermsOfService.js";
 // import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
-
+import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
 import ComponentRenderer from "ComponentRenderer.js";
 import MainLandingPage from "MainLandingPage.js";
 import RestaurantLandingPage from "demos/RestaurantLandingPage.js";
@@ -116,6 +116,7 @@ export default function App() {
 
   return (
     <Router>
+    <Auth0ProviderWithHistory>
       <Switch>
         <Route path="/questions">
           <QuestionPage />
@@ -124,6 +125,7 @@ export default function App() {
           <RestaurantLandingPage />
         </Route>
       </Switch>
+      </Auth0ProviderWithHistory>
     </Router>
   );
 }
