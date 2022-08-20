@@ -59,6 +59,7 @@ export const DesktopNavLinks = tw.nav`
 
 export default ({ roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" }) => {
   const { user, isAuthenticated, isLoading, loginWithRedirect, logout } = useAuth0();
+  const logoutDestination = process.env.NODE_ENV === 'production'? 'https://stanleyawang.github.io/tws' : 'http://localhost:3000'
   /*
    * This header component accepts an optionals "links" prop that specifies the links to render in the navbar.
    * This links props should be an array of "NavLinks" components which is exported from this file.
@@ -83,7 +84,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
       </NavLink>
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Sign Up</PrimaryLink></>)}
       {isAuthenticated && (
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} onClick={() => logout()} style={{ cursor: 'pointer'}}>Logout</PrimaryLink>)}
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} onClick={() => logout({ returnTo: logoutDestination })} style={{ cursor: 'pointer'}}>Logout</PrimaryLink>)}
     </NavLinks>
   ];
 

@@ -7,6 +7,7 @@ const Auth0ProviderWithHistory = ({ children }) => {
   const domain="tws.au.auth0.com"
   const clientId="8tYWJMRaViJVufZRDO7bRyAISKRRQ2BW"
   
+  const redirectUri = process.env.NODE_ENV === 'production'? 'https://stanleyawang.github.io/tws' : 'http://localhost:3000'
   const history = useHistory();
 
   const onRedirectCallback = (appState) => {       
@@ -17,7 +18,7 @@ const Auth0ProviderWithHistory = ({ children }) => {
     <Auth0Provider
       domain={domain}
       clientId={clientId}
-      redirectUri={window.location.origin}
+      redirectUri={redirectUri}
       onRedirectCallback={onRedirectCallback}
     >
       {children}
